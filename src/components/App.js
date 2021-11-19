@@ -89,7 +89,7 @@ class App extends React.Component {
         return (
             <Container fluid>
                 <Container className="start-container" fluid>
-                    <Row>
+                    <Row className="navbar-container">
                         {/* start of navbar */}
                         <Navbar expand="lg">
                             <Container>
@@ -97,14 +97,14 @@ class App extends React.Component {
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="me-auto">
-                                    <Nav.Link href="#home">Home</Nav.Link>
+                                    {/* <Nav.Link href="#home">Home</Nav.Link> */}
                                 </Nav>
                                 </Navbar.Collapse>
                             </Container>
                         </Navbar>
                         {/* end of navbar */}
                     </Row>
-                    <Row>
+                    <Row className="searchbar-container">
                         <SearchBar onSubmit={this.onSearchSubmit} />
                     </Row>
                 </Container>

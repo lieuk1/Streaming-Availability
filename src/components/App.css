@@ -6,33 +6,49 @@
 
 /* Container of navbar and search body */
 .start-container {
-    height: 100vh;
-    background-color: green;
+    height: 80vh;
+    background-color: #fb8500;
+    /* Space between search bar body and search results */
+    margin-bottom: 20px;
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,1));
 }
 
 /* Navigation bar */
 .navbar {
-    padding: 14px;
-    background-color: #fb8500;
+    padding-top: 14px;
+    /* background-color: #fb8500; */
+    /* box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.15); */
 }
 
 /* Navigation bar links */
 .navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link {
+    padding: 10px;
     color: white;
-    border-bottom: 3px solid #fb8500;
+    border-bottom: 3px solid rgba(255,0,0,0);
     border-radius: 1px;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
 }
 
+/* Navigation bar brand hover */
 .navbar-light .navbar-brand:focus, 
 .navbar-light .navbar-brand:hover {
+    /* color: rgba(255,0,0,1); */
     color: white;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid rgba(255,0,0,1); 
+    border-radius: 1px;
 }
 
+/* Navigation bar links hover */
 .navbar-light .navbar-nav .nav-link:focus, 
 .navbar-light .navbar-nav .nav-link:hover {
     color: white;
     border-bottom: 3px solid white;
+}
+
+.searchbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 83%;
 }
