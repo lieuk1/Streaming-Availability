@@ -6,11 +6,25 @@
 
 /* Container of navbar and search body */
 .start-container {
-    height: 80vh;
+    height: 40vh;
     background-color: #fb8500;
-    /* Space between search bar body and search results */
-    margin-bottom: 20px;
     background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+
+/* Container of search bar and form */
+.searchbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Container of navigation bar */
+.navbar-container {
+    /* Display navigation bar and search body on top of each other */
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 /* Navigation bar */
@@ -35,7 +49,8 @@
 .navbar-light .navbar-brand:hover {
     /* color: rgba(255,0,0,1); */
     color: white;
-    border-bottom: 3px solid rgba(255,0,0,1); 
+    /* border-bottom: 3px solid rgba(255,0,0,1);  */
+    border-bottom: 3px solid white; 
     border-radius: 1px;
 }
 
@@ -46,9 +61,12 @@
     border-bottom: 3px solid white;
 }
 
-.searchbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 83%;
+/* Number of search results */
+.num-results {
+    border: 0px solid black;
+    border-bottom: 1px solid grey;
+    color: grey;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
 }

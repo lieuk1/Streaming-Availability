@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className="ui raised segment" style={{ padding: '0px', width: '50%' }}>
+            <div className="ui" style={{ padding: '0px', width: '70%' }}>
                 <form onSubmit={this.onFormSubmit} className="ui form" style={{ border: '0px solid red' }}>
                     <div className="field" style={{ border: '0px solid red' }}>
                         <div className="ui massive icon input">

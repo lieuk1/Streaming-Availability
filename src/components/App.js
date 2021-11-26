@@ -1,5 +1,6 @@
 import React from 'react';
 import watchmode from '../api/watchmode';
+import NavigationBar from './Navigation/NavigationBar';
 import SearchBar from './Search/SearchBar';
 import TitleList from './Title/TitleList';
 import TitleDetail from './Title/TitleDetail';
@@ -10,9 +11,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 
 class App extends React.Component {
     state = { 
@@ -82,31 +80,20 @@ class App extends React.Component {
             selectedTitle: title
         });
     }
-
-    // TODO: Create new component for navbar
-
+    
     render() {
         return (
             <Container fluid>
                 <Container className="start-container" fluid>
-                    <Row className="navbar-container">
-                        {/* start of navbar */}
-                        <Navbar expand="lg">
-                            <Container>
-                                <Navbar.Brand href="/">STREAMING AVAILABILITY</Navbar.Brand>
-                                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                                <Navbar.Collapse id="basic-navbar-nav">
-                                <Nav className="me-auto">
-                                    {/* <Nav.Link href="#home">Home</Nav.Link> */}
-                                </Nav>
-                                </Navbar.Collapse>
-                            </Container>
-                        </Navbar>
-                        {/* end of navbar */}
-                    </Row>
-                    <Row className="searchbar-container">
+                    <Container className="navbar-container" fluid>
+                        <NavigationBar />
+                    </Container>
+                    <Container className="searchbar-container">
                         <SearchBar onSubmit={this.onSearchSubmit} />
-                    </Row>
+                    </Container>
+                </Container>
+                <Container>
+                    <div className="num-results">{this.state.titles.length} Results</div>
                 </Container>
                 <div className="ui container">
                     <div style={{ float: 'left', width: '40%' }} >
