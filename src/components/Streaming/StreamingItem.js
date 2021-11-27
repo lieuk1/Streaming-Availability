@@ -15,8 +15,6 @@ const StreamingItem = ({ source, sourceType }) => {
         jsonSources = SubSources;
     } else if (sourceType === "buy") {
         jsonSources = BuySources;
-    } else {
-        // jsonSources = RentSources;
     }
 
     // Find icon for source in json file using id

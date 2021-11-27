@@ -1,7 +1,7 @@
 import React from 'react';
 import StreamingItem from './StreamingItem';
 
-const StreamingAvailability = ({ subSources, buySources, rentSources }) => {
+const StreamingAvailability = ({ subSources, buySources }) => {
     if (subSources.length === 0 & buySources.length === 0 & rentSources.length === 0) {
         return <div>No Streaming Sources Available</div>;
     }
@@ -17,12 +17,6 @@ const StreamingAvailability = ({ subSources, buySources, rentSources }) => {
     });
 
     // console.log(buySourcesList);
-    
-    const rentSourcesList = rentSources.map((source) => {
-        return <StreamingItem key={source.source_id} source={source} sourceType="rent" />;
-    });
-    
-    // console.log(rentSourcesList);
 
     return (
         <div>
