@@ -1,7 +1,6 @@
 import React from 'react';
 import SubSources from './sub-sources.json';
 import BuySources from './buy-sources.json';
-// import RentSources from './rent-sources.json';
 
 const StreamingItem = ({ source, sourceType }) => {
     const sourceID = source.source_id;
