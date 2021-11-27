@@ -22,7 +22,9 @@ class App extends React.Component {
             // { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
         ], 
         selectedTitle: null, 
-        sources: [] 
+        subSources: [],
+        buySources: [],
+        rentSources: []
     };
 
     // Parse term - remove unecessary whitespace
@@ -68,7 +70,9 @@ class App extends React.Component {
     filterStream = sources => {
         // Filter sources with US region and subscription type, no SD quality
         const filtered = sources.filter(source => source.region === 'US' & source.format !== 'SD' & source.type === 'sub');
-        this.setState({ sources: filtered });
+        this.setState({ 
+            sources: filtered 
+        });
     }
 
     onTitleSelect = async title => {
