@@ -69,9 +69,13 @@ class App extends React.Component {
     
     filterStream = sources => {
         // Filter sources with US region and subscription type, no SD quality
-        const filtered = sources.filter(source => source.region === 'US' & source.format !== 'SD' & source.type === 'sub');
+        const sub = sources.filter(source => source.region === 'US' & source.format !== 'SD' & source.type === 'sub');
+        const buy = sources.filter(source => source.region === 'US' & source.format !== 'SD' & source.type === 'buy');
+        const rent = sources.filter(source => source.region === 'US' & source.format !== 'SD' & source.type === 'rent');
         this.setState({ 
-            sources: filtered 
+            subSources: sub,
+            buySources: buy,
+            rentSources: rent
         });
     }
 
