@@ -111,7 +111,12 @@ class App extends React.Component {
                         />
                     </div>
                     <div style={{ float: 'left', width: '60%' }}>
-                        <TitleDetail title={this.state.selectedTitle} sources={this.state.sources} />
+                        <TitleDetail 
+                            title={this.state.selectedTitle} 
+                            subSources={this.state.subSources} 
+                            buySources={this.state.buySources}
+                            rentSources={this.state.rentSources}
+                        />
                     </div>
                 </div>
             </Container>
