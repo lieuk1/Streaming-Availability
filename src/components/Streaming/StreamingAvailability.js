@@ -2,7 +2,7 @@ import React from 'react';
 import StreamingItem from './StreamingItem';
 
 const StreamingAvailability = ({ subSources, buySources }) => {
-    if (subSources.length === 0 & buySources.length === 0 & rentSources.length === 0) {
+    if (subSources.length === 0 & buySources.length === 0) {
         return <div>No Streaming Sources Available</div>;
     }
 
@@ -23,8 +23,6 @@ const StreamingAvailability = ({ subSources, buySources }) => {
             {subSourcesList}
             <br />
             {buySourcesList}
-            <br />
-            {rentSourcesList}
         </div>
     );
 }
