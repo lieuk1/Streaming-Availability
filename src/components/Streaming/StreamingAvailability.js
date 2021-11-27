@@ -22,6 +22,7 @@ const StreamingAvailability = ({ subSources, buySources }) => {
         <div>
             {subSourcesList}
             <br />
+            <br />
             {buySourcesList}
         </div>
     );
