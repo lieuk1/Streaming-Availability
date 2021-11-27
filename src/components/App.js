@@ -23,8 +23,7 @@ class App extends React.Component {
         ], 
         selectedTitle: null, 
         subSources: [],
-        buySources: [],
-        rentSources: []
+        buySources: []    
     };
 
     // Parse term - remove unecessary whitespace
@@ -71,11 +70,9 @@ class App extends React.Component {
         // Filter sources with US region and subscription type, no SD quality
         const sub = sources.filter(source => source.region === 'US' & source.format !== 'SD' & source.type === 'sub');
         const buy = sources.filter(source => source.region === 'US' & source.format !== 'SD' & source.type === 'buy');
-        const rent = sources.filter(source => source.region === 'US' & source.format !== 'SD' & source.type === 'rent');
         this.setState({ 
             subSources: sub,
             buySources: buy,
-            rentSources: rent
         });
     }
 
@@ -115,7 +112,6 @@ class App extends React.Component {
                             title={this.state.selectedTitle} 
                             subSources={this.state.subSources} 
                             buySources={this.state.buySources}
-                            rentSources={this.state.rentSources}
                         />
                     </div>
                 </div>

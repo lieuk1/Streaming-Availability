@@ -1,7 +1,7 @@
 import React from 'react';
 import StreamingAvailability from '../Streaming/StreamingAvailability';
 
-const TitleDetail = ({ title, subSources, buySources, rentSources }) => {
+const TitleDetail = ({ title, subSources, buySources }) => {
     if (!title) {
         return <div></div>
     }
@@ -24,7 +24,7 @@ const TitleDetail = ({ title, subSources, buySources, rentSources }) => {
                     </div>
                     <div className="item">
                         <div className="content">
-                            <StreamingAvailability subSources={subSources} buySources={buySources} rentSources={rentSources} />
+                            <StreamingAvailability subSources={subSources} buySources={buySources} />
                         </div>
                     </div>
                 </div>
