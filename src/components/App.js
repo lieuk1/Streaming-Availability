@@ -98,7 +98,7 @@ class App extends React.Component {
                     </Container>
                 </Container>
                 <Container>
-                    <div className="num-results">{this.state.titles.length} Results</div>
+                    <div className="num-results">{this.state.titles.length} Result(s)</div>
                 </Container>
                 <div className="ui container">
                     <div style={{ float: 'left', width: '40%' }} >
