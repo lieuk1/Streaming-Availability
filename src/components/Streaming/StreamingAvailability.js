@@ -7,19 +7,19 @@ const StreamingAvailability = ({ subSources, buySources, rentSources }) => {
     }
 
     const subSourcesList = subSources.map((source) => {
-        return <StreamingItem key={source.source_id} source={source} />;
+        return <StreamingItem key={source.source_id} source={source} sourceType="sub" />;
     });
 
     // console.log(subSourcesList);
 
     const buySourcesList = buySources.map((source) => {
-        return <StreamingItem key={source.source_id} source={source} />;
+        return <StreamingItem key={source.source_id} source={source} sourceType="buy" />;
     });
 
     // console.log(buySourcesList);
     
     const rentSourcesList = rentSources.map((source) => {
-        return <StreamingItem key={source.source_id} source={source} />;
+        return <StreamingItem key={source.source_id} source={source} sourceType="rent" />;
     });
     
     // console.log(rentSourcesList);
