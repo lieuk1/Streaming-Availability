@@ -89,18 +89,13 @@ class App extends React.Component {
     render() {
         return (
             <Container fluid>
-                <Container className="start-container" fluid>
-                    <Container className="navbar-container" fluid>
-                        <NavigationBar />
-                    </Container>
-                    <Container className="searchbar-container">
-                        <SearchBar onSubmit={this.onSearchSubmit} />
-                    </Container>
+                <Container className="navbar-container" fluid>
+                    <NavigationBar onSubmit={this.onSearchSubmit} />
                 </Container>
-                <Container>
+                <Container className="num-results-container">
                     <div className="num-results">{this.state.titles.length} Result(s)</div>
                 </Container>
-                <div className="ui container">
+                <Container className="results-container">
                     <div style={{ float: 'left', width: '40%' }} >
                         <TitleList 
                             onTitleSelect={this.onTitleSelect} 
@@ -114,7 +109,7 @@ class App extends React.Component {
                             buySources={this.state.buySources}
                         />
                     </div>
-                </div>
+                </Container>
             </Container>
 
         );
