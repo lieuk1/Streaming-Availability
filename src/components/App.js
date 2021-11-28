@@ -1,7 +1,6 @@
 import React from 'react';
 import watchmode from '../api/watchmode';
 import NavigationBar from './Navigation/NavigationBar';
-import SearchBar from './Search/SearchBar';
 import TitleList from './Title/TitleList';
 import TitleDetail from './Title/TitleDetail';
 
