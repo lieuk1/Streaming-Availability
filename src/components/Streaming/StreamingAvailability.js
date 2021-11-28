@@ -7,17 +7,13 @@ const StreamingAvailability = ({ subSources, buySources }) => {
     }
 
     const subSourcesList = subSources.map((source) => {
-        return <StreamingItem key={source.source_id} source={source} sourceType="sub" />;
+        return <StreamingItem key={source.source_id} source={source} />;
     });
-
-    // console.log(subSourcesList);
 
     const buySourcesList = buySources.map((source) => {
-        return <StreamingItem key={source.source_id} source={source} sourceType="buy" />;
+        return <StreamingItem key={source.source_id} source={source} />;
     });
-
-    // console.log(buySourcesList);
-
+    
     return (
         <div>
             {subSourcesList}
