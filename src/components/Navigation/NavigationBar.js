@@ -11,7 +11,9 @@ const NavigationBar = ({ onSubmit }) => {
                 <Navbar.Brand href="/">STREAMING AVAILABILITY</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                <SearchBar onSubmit={onSubmit} />
+                <div className="searchbar-container">
+                    <SearchBar onSubmit={onSubmit} />
+                </div>
                 <Nav className="me-auto">
                     <Nav.Link href="#">Link</Nav.Link>
                     <Nav.Link href="#">Link</Nav.Link>
