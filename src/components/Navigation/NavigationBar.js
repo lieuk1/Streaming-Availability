@@ -15,10 +15,10 @@ const NavigationBar = ({ onSubmit }) => {
                     <SearchBar onSubmit={onSubmit} />
                 </div>
                 <Nav className="me-auto">
-                    <Nav.Link href="#">Link</Nav.Link>
-                    <Nav.Link href="#">Link</Nav.Link>
-                    <Nav.Link href="#">Link</Nav.Link>
-                    <Nav.Link href="#">Link</Nav.Link>
+                    <Nav.Link href="/">Link</Nav.Link>
+                    <Nav.Link href="/">Link</Nav.Link>
+                    <Nav.Link href="/">Link</Nav.Link>
+                    <Nav.Link href="/">Link</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
                 <Button variant="outline-secondary" href="#">Login</Button>
