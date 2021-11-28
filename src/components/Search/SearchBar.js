@@ -12,11 +12,11 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className="ui" style={{ padding: '0px', width: '70%' }}>
+            <div className="search-container">
                 <form onSubmit={this.onFormSubmit} className="ui form" style={{ border: '0px solid red' }}>
                     <div className="field" style={{ border: '0px solid red' }}>
-                        <div className="ui massive icon input">
-                            <input type="text" placeholder="Search by title . . ."
+                        <div className="ui icon input">
+                            <input type="text" placeholder="Search for movies and tv series"
                                 value={this.state.term} onChange={(e) => this.setState({ term: e.target.value })}
                             />
                             <i className="search icon" />
