@@ -17,13 +17,13 @@ const TitleDetail = ({ show, onHide, title, subSources, buySources }) => {
         >
             <Modal.Header closeButton>
             <Modal.Title id="contained-modal-title-vcenter">
-                Modal heading
+                <h1 className="header">{title.title}</h1>
             </Modal.Title>
+            <span>({title.year ? title.year : 'No Release Date'})</span>
+            {title.tmdb_type === 'tv' && <div className="meta">TV Series</div>}
+            {title.tmdb_type === 'movie' && <div className="meta">Movie</div>}
             </Modal.Header>
             <Modal.Body>
-                <div className="header">{title.title} ({title.year})</div>
-                {title.tmdb_type === 'tv' && <div className="meta">TV Series</div>}
-                {title.tmdb_type === 'movie' && <div className="meta">Movie</div>}
                 <div className="description">{title.plot_overview}</div>
                 <div className="item">
                     <div className="content">
