@@ -88,6 +88,7 @@ class App extends React.Component {
         this.setState({ 
             selectedTitle: title
         });
+        this.setModalShow(true);
     }
     
     render() {
@@ -108,7 +109,7 @@ class App extends React.Component {
                     </div>
                     <div style={{ float: 'left', width: '60%' }}>
                         <TitleDetail 
-                            show={modalShow}
+                            show={this.state.modalShow}
                             onHide={() => this.setModalShow(false)}
                             title={this.state.selectedTitle} 
                             subSources={this.state.subSources} 
