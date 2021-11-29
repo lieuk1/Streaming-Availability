@@ -22,8 +22,13 @@ class App extends React.Component {
         ], 
         selectedTitle: null, 
         subSources: [],
-        buySources: []    
+        buySources: [],
+        modalShow: false
     };
+
+    setModalShow = (isShow) => {
+        this.setState({ modalShow: isShow });
+    }
 
     // Parse term - remove unecessary whitespace
     parseTerm = term => {
