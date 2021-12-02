@@ -16,10 +16,18 @@ const StreamingAvailability = ({ subSources, buySources }) => {
 
     return (
         <React.Fragment>
-            {subSourcesList.length !== 0 && <h6>Subscription</h6>}
-            <div className="sub-sources-list">{subSourcesList}</div>
-            {buySourcesList.length !== 0 && <h6>Purchase/Rent</h6>}
-            <div className="buy-sources-list">{buySourcesList}</div>
+            { subSourcesList.length !== 0 && (
+                <React.Fragment>
+                <h6>Subscription</h6>
+                <div className="sub-sources-list">{subSourcesList}</div>
+                </React.Fragment>
+            ) }
+            { buySourcesList.length !== 0 && (
+                <React.Fragment>
+                <h6>Purchase/Rent</h6>
+                <div className="buy-sources-list">{buySourcesList}</div>
+                </React.Fragment>
+            ) }
         </React.Fragment>
     );
 }
