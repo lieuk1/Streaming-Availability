@@ -15,12 +15,10 @@ const StreamingAvailability = ({ subSources, buySources }) => {
     });
     
     return (
-        <div>
-            {subSourcesList}
-            <br />
-            <br />
-            {buySourcesList}
-        </div>
+        <React.Fragment>
+            <div class="sub-sources-list">{subSourcesList}</div>
+            <div class="buy-sources-list">{buySourcesList}</div>
+        </React.Fragment>
     );
 }
 
