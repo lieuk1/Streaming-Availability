@@ -35,6 +35,7 @@
 /* streaming source item */
 .source-item {
     display: inline-block;
+    margin-right: 8px;
 }
 
 /* List of subscription sources */
