@@ -14,9 +14,6 @@ const StreamingAvailability = ({ subSources, buySources }) => {
         return <StreamingItem key={source.source_id} source={source} />;
     });
 
-    console.log(subSourcesList.length);
-    console.log(buySourcesList.length);
-    
     return (
         <React.Fragment>
             {subSourcesList.length !== 0 && <h6>Subscription</h6>}
