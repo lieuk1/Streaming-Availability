@@ -101,24 +101,19 @@ class App extends React.Component {
                     <div className="num-results">{this.state.titles.length} Result(s)</div>
                 </Container>
                 <Container className="results-container">
-                    <div style={{ float: 'left', width: '40%' }} >
-                        <TitleList 
-                            onTitleSelect={this.onTitleSelect} 
-                            titles={this.state.titles}
-                        />
-                    </div>
-                    <div style={{ float: 'left', width: '60%' }}>
-                        <TitleDetail 
-                            show={this.state.modalShow}
-                            onHide={() => this.setModalShow(false)}
-                            title={this.state.selectedTitle} 
-                            subSources={this.state.subSources} 
-                            buySources={this.state.buySources}
-                        />
-                    </div>
+                    <TitleList 
+                        onTitleSelect={this.onTitleSelect} 
+                        titles={this.state.titles}
+                    />
+                    <TitleDetail 
+                        show={this.state.modalShow}
+                        onHide={() => this.setModalShow(false)}
+                        title={this.state.selectedTitle} 
+                        subSources={this.state.subSources} 
+                        buySources={this.state.buySources}
+                    />
                 </Container>
             </Container>
-
         );
     }
 }
