@@ -16,7 +16,7 @@ const StreamingItem = ({ source }) => {
     });
 
     return (
-        <div style={{ display: 'inline-block' }} class="source-item">
+        <div class="source-item">
             <a href={source.web_url} target="_blank" rel="noopener noreferrer">
                 {sourceIcon}
             </a>

@@ -32,6 +32,16 @@
     margin-right: 4px;
 }
 
+/* streaming source item */
+.source-item {
+    display: inline-block;
+}
+
+/* List of subscription sources */
+.sub-sources-list {
+    margin-bottom: 14px;
+}
+
 /* Navigation bar */
 .navbar {
     padding: 14px 0px 14px 0px;
