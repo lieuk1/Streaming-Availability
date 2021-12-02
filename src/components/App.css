@@ -11,6 +11,27 @@
     padding-right: 14px;
 }
 
+/* Modal title and release year */
+.header {
+    margin-bottom: 0;
+}
+
+/* Modal title type (movie/tv) */
+.meta {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Modal title description */
+.description {
+    margin-bottom: 14px;
+}
+
+/* Modal close x button */
+.modal-header .btn-close {
+    margin-right: 4px;
+}
+
 /* Navigation bar */
 .navbar {
     padding: 14px 0px 14px 0px;
