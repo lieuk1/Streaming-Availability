@@ -13,12 +13,15 @@ const StreamingAvailability = ({ subSources, buySources }) => {
     const buySourcesList = buySources.map((source) => {
         return <StreamingItem key={source.source_id} source={source} />;
     });
+
+    console.log(subSourcesList.length);
+    console.log(buySourcesList.length);
     
     return (
         <React.Fragment>
-            <h6>Subscription</h6>
+            {subSourcesList.length !== 0 && <h6>Subscription</h6>}
             <div className="sub-sources-list">{subSourcesList}</div>
-            <h6>Purchase/Rent</h6>
+            {buySourcesList.length !== 0 && <h6>Purchase/Rent</h6>}
             <div className="buy-sources-list">{buySourcesList}</div>
         </React.Fragment>
     );
