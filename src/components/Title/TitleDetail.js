@@ -3,10 +3,6 @@ import StreamingAvailability from '../Streaming/StreamingAvailability';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
 const TitleDetail = ({ show, onHide, title, titlePoster, subSources, buySources }) => {
     if (!title) {
         return <div></div>
