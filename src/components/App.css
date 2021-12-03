@@ -51,7 +51,7 @@
 /* Modal poster img */
 .poster-img {
     height: 100%;
-    /* width: 230px; */
+    width: 300px;
     object-fit: cover;
     border-radius: 0;
     border-top-left-radius: .3rem;
