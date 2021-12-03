@@ -43,6 +43,19 @@
     margin-bottom: 14px;
 }
 
+/* Container of modal content */
+.title-content-container {
+    display: flex;
+}
+
+/* Modal poster img */
+.poster-img {
+    height: 100%;
+    width: 230px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
 /* Navigation bar */
 .navbar {
     padding: 14px 0px 14px 0px;

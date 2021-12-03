@@ -19,12 +19,11 @@ const TitleDetail = ({ show, onHide, title, titlePoster, subSources, buySources 
             aria-labelledby="contained-modal-title-vcenter"
             centered
         >
-            <div style={{ display: 'flex' }}>
-                <div>
-                    <img alt={title.title} src={titlePoster} 
-                    style={{ height: '100%', width: '230px', objectFit: 'cover', borderRadius: '0px' }} />
+            <div className="title-content-container">
+                <div className="poster-img-container">
+                    <img alt={title.title} src={titlePoster} className="poster-img" />
                 </div>
-                <div>
+                <div className="details-container">
                     <Modal.Header closeButton>
                         <Modal.Title id="contained-modal-title-vcenter">
                             <h1 className="header">{title.title} ({title.year ? title.year : 'No Release Date'})</h1>
