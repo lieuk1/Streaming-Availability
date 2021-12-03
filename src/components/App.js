@@ -81,13 +81,14 @@ class App extends React.Component {
         });
     }
 
-    onTitleSelect = async title => {
+    onTitleSelect = async (title, posterUrl) => {
         const response = await watchmode.get(`/title/${title.id}/sources/`);
         console.log("WATCHMODE REQUESTS REMAINING: " + response.headers["x-ratelimit-requests-remaining"]);
         // Filter response to contain only specific sources
         this.filterStream(response.data);
         this.setState({ 
-            selectedTitle: title
+            selectedTitle: title,
+            selectedTitlePosterUrl: posterUrl
         });
         this.setModalShow(true);
     }

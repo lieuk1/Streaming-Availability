@@ -6,7 +6,7 @@ const TitleItem = ({ title, onTitleSelect }) => {
 
     return (
         <div className="card" style={{ width: '200px' }}>
-            <div onClick={() => onTitleSelect(title)} className="image" style={{width: '200px'}}>
+            <div onClick={() => onTitleSelect(title, posterUrl)} className="image" style={{width: '200px'}}>
                 <TitlePoster imdb_id={title.imdb_id} setPosterUrl={setPosterUrl} />
             </div>
         </div>
