@@ -3,7 +3,7 @@ import StreamingAvailability from '../Streaming/StreamingAvailability';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-const TitleDetail = ({ show, onHide, title, subSources, buySources }) => {
+const TitleDetail = ({ show, onHide, title, titlePoster, subSources, buySources }) => {
     if (!title) {
         return <div></div>
     }

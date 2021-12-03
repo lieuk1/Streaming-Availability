@@ -21,6 +21,7 @@ class App extends React.Component {
             // { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
         ], 
         selectedTitle: null, 
+        selectedTitlePosterUrl: null,
         subSources: [],
         buySources: [],
         modalShow: false
@@ -109,6 +110,7 @@ class App extends React.Component {
                         show={this.state.modalShow}
                         onHide={() => this.setModalShow(false)}
                         title={this.state.selectedTitle} 
+                        titlePoster={this.state.selectedTitlePosterUrl}
                         subSources={this.state.subSources} 
                         buySources={this.state.buySources}
                     />
