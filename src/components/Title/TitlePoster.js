@@ -21,7 +21,7 @@ class TitlePoster extends React.Component {
             const a = await response;
             // console.log(a.data.Poster);
             this.setState({ posterURL: a.data.Poster });
-            // this.props.onTestPost(this.state.posterURL);
+            this.props.setPosterUrl(this.state.posterURL);
         }
         
         printIt();
