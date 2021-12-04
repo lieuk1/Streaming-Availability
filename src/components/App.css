@@ -68,7 +68,7 @@
 /* Navigation bar brand and links */
 .navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link {
-    color: #6c757d;
+    color: #444;
     transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
@@ -84,9 +84,18 @@
     color: black;
 }
 
+.navbar-light .navbar-brand {
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    color: #444;
+    font-size: 30px;
+    line-height: 24px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
 /* Number of search results */
 .num-results {
-    color: grey;
+    color: #444;
     font-size: 20px;
     margin-bottom: 30px;
 }

@@ -8,7 +8,7 @@ const NavigationBar = ({ onSubmit }) => {
     return (
         <Navbar expand="lg">
             <Container>
-                <Navbar.Brand href="/">STREAMING AVAILABILITY</Navbar.Brand>
+                <Navbar.Brand href="/">StreamMite</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <div className="searchbar-container">
