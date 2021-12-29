@@ -88,16 +88,12 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 ### Built With
 
 * [React.js](https://reactjs.org/)
 * [React-Bootstrap](https://react-bootstrap.github.io/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -139,8 +135,6 @@ To get a local copy up and running follow these simple example steps.
    ```
    Ensure your API keys are not uploaded to GitHub!
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- USAGE EXAMPLES -->
@@ -150,7 +144,7 @@ To get a local copy up and running follow these simple example steps.
 
 _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
 
 
 
@@ -164,7 +158,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 
 See the [open issues](https://github.com/lieuk1/Streaming-Availability/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
 
 
 
@@ -189,9 +183,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+Distributed under the MIT License. See [LICENSE.txt](https://github.com/lieuk1/Streaming-Availability/blob/main/LICENSE.txt) for more information.
 
 
 
@@ -201,8 +193,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 Kristella Lieu - lieuk1@tcnj.edu
 
 Project Link: [https://github.com/lieuk1/Streaming-Availability](https://github.com/lieuk1/Streaming-Availability)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
