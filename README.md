@@ -201,6 +201,7 @@ Project Link: [https://github.com/lieuk1/Streaming-Availability](https://github.
 
 * [Watchmode API](https://api.watchmode.com/)
 * [OMDb API](https://www.omdbapi.com/)
+* [Semantic UI](https://semantic-ui.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
