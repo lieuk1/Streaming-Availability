@@ -115,19 +115,29 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Get a free [Watchmode API key](https://api.watchmode.com/) 
+2. Get a free [OMDb API key](https://www.omdbapi.com/)
+3. Clone the repo
    ```sh
    git clone https://github.com/lieuk1/Streaming-Availability.git
    ```
-3. Install NPM packages
+4. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+5. Create a `.env` file in the root project directory (same    folder as `.gitignore` and `README.md`)
+6. Enter your API keys in `.env`
+   ```.env
+   REACT_APP_WATCHMODE_API_KEY=YOUR_KEY
+   REACT_APP_OMDB_API_KEY=YOUR_KEY
    ```
+7. Add `.env` to the end of the `.gitignore` file
+   ```.gitignore
+   ...
+   # api keys
+   .env
+   ```
+   Ensure your API keys are not uploaded to GitHub!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
