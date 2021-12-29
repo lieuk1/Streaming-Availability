@@ -17,9 +17,7 @@
 
 /* Container of search bar */
 .searchbar-container {
-    /* Width of search bar */
-    width: 70%;
-    padding-right: 14px;
+    padding-bottom: 20px;
 }
 
 /* Modal title and release year */
@@ -108,5 +106,7 @@
 .num-results {
     color: #444;
     font-size: 20px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }

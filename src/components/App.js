@@ -102,7 +102,7 @@ class App extends React.Component {
                     <h1>Stream Mite</h1>
                     <p>A simple and free streaming availability lookup tool</p>
                 </Container>
-                <Container className="">
+                <Container className="searchbar-container">
                     <SearchBar onSubmit={this.onSearchSubmit} />
                 </Container>
                 <Container className="num-results-container">
