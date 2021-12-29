@@ -1,6 +1,7 @@
 import React from 'react';
 import watchmode from '../api/watchmode';
 import NavigationBar from './Navigation/NavigationBar';
+// import SearchBar from './Search/SearchBar';
 import TitleList from './Title/TitleList';
 import TitleDetail from './Title/TitleDetail';
 
@@ -10,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Container from 'react-bootstrap/Container';
+import SearchBar from './Search/SearchBar';
 
 class App extends React.Component {
     state = { 
@@ -95,9 +97,13 @@ class App extends React.Component {
     
     render() {
         return (
-            <Container fluid>
-                <Container className="navbar-container" fluid>
-                    <NavigationBar onSubmit={this.onSearchSubmit} />
+            <Container className="landing">
+                <Container className="header">
+                    <h1>Stream Mite</h1>
+                    <p>A simple and free streaming availability lookup tool</p>
+                </Container>
+                <Container className="">
+                    <SearchBar onSubmit={this.onSearchSubmit} />
                 </Container>
                 <Container className="num-results-container">
                     <div className="num-results">{this.state.titles.length} Result(s)</div>
