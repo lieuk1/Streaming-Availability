@@ -1,6 +1,6 @@
 import React from 'react';
 import watchmode from '../api/watchmode';
-import SearchBar from './Search/SearchBar';
+import NavigationBar from './Navigation/NavigationBar';
 import TitleList from './Title/TitleList';
 import TitleDetail from './Title/TitleDetail';
 
@@ -10,9 +10,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 
 class App extends React.Component {
     state = { 
@@ -24,8 +21,15 @@ class App extends React.Component {
             // { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
         ], 
         selectedTitle: null, 
-        sources: [] 
+        selectedTitlePosterUrl: null,
+        subSources: [],
+        buySources: [],
+        modalShow: false
     };
+
+    setModalShow = (isShow) => {
+        this.setState({ modalShow: isShow });
+    }
 
     // Parse term - remove unecessary whitespace
     parseTerm = term => {
@@ -68,59 +72,51 @@ class App extends React.Component {
     }
     
     filterStream = sources => {
-        // Filter sources with US region and subscription type, no SD quality
-        const filtered = sources.filter(source => source.region === 'US' & source.format !== 'SD' & source.type === 'sub');
-        this.setState({ sources: filtered });
+        // Filter sources with US region and no SD quality
+        const sub = sources.filter(source => source.region === 'US' & source.format !== 'SD' & source.type === 'sub');
+        const buy = sources.filter(source => source.region === 'US' & source.format !== 'SD' & source.type === 'buy');
+        this.setState({ 
+            subSources: sub,
+            buySources: buy
+        });
     }
 
-    onTitleSelect = async title => {
+    onTitleSelect = async (title, posterUrl) => {
         const response = await watchmode.get(`/title/${title.id}/sources/`);
         console.log("WATCHMODE REQUESTS REMAINING: " + response.headers["x-ratelimit-requests-remaining"]);
         // Filter response to contain only specific sources
         this.filterStream(response.data);
         this.setState({ 
-            selectedTitle: title
+            selectedTitle: title,
+            selectedTitlePosterUrl: posterUrl
         });
+        this.setModalShow(true);
     }
-
-    // TODO: Create new component for navbar
-
+    
     render() {
         return (
             <Container fluid>
-                <Container className="start-container" fluid>
-                    <Row>
-                        {/* start of navbar */}
-                        <Navbar expand="lg">
-                            <Container>
-                                <Navbar.Brand href="/">STREAMING AVAILABILITY</Navbar.Brand>
-                                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                                <Navbar.Collapse id="basic-navbar-nav">
-                                <Nav className="me-auto">
-                                    <Nav.Link href="#home">Home</Nav.Link>
-                                </Nav>
-                                </Navbar.Collapse>
-                            </Container>
-                        </Navbar>
-                        {/* end of navbar */}
-                    </Row>
-                    <Row>
-                        <SearchBar onSubmit={this.onSearchSubmit} />
-                    </Row>
+                <Container className="navbar-container" fluid>
+                    <NavigationBar onSubmit={this.onSearchSubmit} />
                 </Container>
-                <div className="ui container">
-                    <div style={{ float: 'left', width: '40%' }} >
-                        <TitleList 
-                            onTitleSelect={this.onTitleSelect} 
-                            titles={this.state.titles}
-                        />
-                    </div>
-                    <div style={{ float: 'left', width: '60%' }}>
-                        <TitleDetail title={this.state.selectedTitle} sources={this.state.sources} />
-                    </div>
-                </div>
+                <Container className="num-results-container">
+                    <div className="num-results">{this.state.titles.length} Result(s)</div>
+                </Container>
+                <Container className="results-container">
+                    <TitleList 
+                        onTitleSelect={this.onTitleSelect} 
+                        titles={this.state.titles}
+                    />
+                    <TitleDetail 
+                        show={this.state.modalShow}
+                        onHide={() => this.setModalShow(false)}
+                        title={this.state.selectedTitle} 
+                        titlePoster={this.state.selectedTitlePosterUrl}
+                        subSources={this.state.subSources} 
+                        buySources={this.state.buySources}
+                    />
+                </Container>
             </Container>
-
         );
     }
 }

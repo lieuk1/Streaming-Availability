@@ -12,18 +12,16 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className="ui raised segment" style={{ padding: '0px', border: '0px solid red', marginBottom: '40px' }}>
-                <form onSubmit={this.onFormSubmit} className="ui form" style={{ border: '0px solid red' }}>
-                    <div className="field" style={{ border: '0px solid red' }}>
-                        <div className="ui massive icon input">
-                            <input type="text" placeholder="Search by title . . ."
-                                value={this.state.term} onChange={(e) => this.setState({ term: e.target.value })}
-                            />
-                            <i className="search icon" />
-                        </div>
+            <form onSubmit={this.onFormSubmit} className="ui form" style={{ border: '0px solid red' }}>
+                <div className="field" style={{ border: '0px solid red' }}>
+                    <div className="ui icon input">
+                        <input type="text" placeholder="Search for movies and tv series"
+                            value={this.state.term} onChange={(e) => this.setState({ term: e.target.value })}
+                        />
+                        <i className="search icon" />
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
         );
     }
 }

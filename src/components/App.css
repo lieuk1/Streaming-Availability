@@ -1,38 +1,101 @@
-/* Container of entire web page */
+/* Bootstrap Fluid Containers */
 .container-fluid {
     padding: 0px;
     margin: 0px;
 }
 
-/* Container of navbar and search body */
-.start-container {
-    height: 100vh;
-    background-color: green;
+/* Container of search bar */
+.searchbar-container {
+    /* Width of search bar */
+    width: 70%;
+    padding-right: 14px;
+}
+
+/* Modal title and release year */
+.header {
+    margin-bottom: 0;
+}
+
+/* Modal title type (movie/tv) */
+.meta {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Modal title description */
+.description {
+    margin-bottom: 14px;
+}
+
+/* Modal close x button */
+.modal-header .btn-close {
+    margin-right: 4px;
+}
+
+/* streaming source item */
+.source-item {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+/* List of subscription sources */
+.sub-sources-list {
+    margin-bottom: 14px;
+}
+
+/* Container of modal content */
+.title-content-container {
+    display: flex;
+}
+
+/* Modal poster img */
+.poster-img {
+    height: 100%;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 0;
+    border-top-left-radius: .3rem;
+    border-bottom-left-radius: .3rem;
 }
 
 /* Navigation bar */
 .navbar {
-    padding: 14px;
-    background-color: #fb8500;
+    padding: 14px 0px 14px 0px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
 }
 
-/* Navigation bar links */
+/* Navigation bar brand and links */
 .navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link {
-    color: white;
-    border-bottom: 3px solid #fb8500;
-    border-radius: 1px;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    color: #444;
+    transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
+/* Navigation bar brand hover */
 .navbar-light .navbar-brand:focus, 
 .navbar-light .navbar-brand:hover {
-    color: white;
-    border-bottom: 3px solid white;
+    color: black;
 }
 
+/* Navigation bar links hover */
 .navbar-light .navbar-nav .nav-link:focus, 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: white;
-    border-bottom: 3px solid white;
+    color: black;
+}
+
+.navbar-light .navbar-brand {
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    color: #444;
+    font-size: 30px;
+    line-height: 24px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+/* Number of search results */
+.num-results {
+    color: #444;
+    font-size: 20px;
+    margin-bottom: 30px;
 }

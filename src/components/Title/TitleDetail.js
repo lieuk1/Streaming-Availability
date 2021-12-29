@@ -1,35 +1,46 @@
 import React from 'react';
 import StreamingAvailability from '../Streaming/StreamingAvailability';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
-const TitleDetail = ({ title, sources }) => {
+const TitleDetail = ({ show, onHide, title, titlePoster, subSources, buySources }) => {
     if (!title) {
         return <div></div>
     }
 
     return (
-        <div className="ui segment" style={{ width: '100%', marginBottom: '14px', height: '300px' }}>
-            <div className="content">
-                <div className="ui items">
-                    <div className="item">
-                        {/* <div className="image">
-                            <img className="ui large image" alt="Poster Image" src="https://semantic-ui.com/images/wireframe/image.png" />
-                            <img className="ui large image" alt="Poster Image" src="https:cdn.watchmode.com/provider_logos/netflix_100px.png" />
-                        </div> */}
-                        <div className="content">
-                            <div className="header">{title.title} ({title.year})</div>
+        <Modal
+            show={show}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+        >
+            <div className="title-content-container">
+                <div className="poster-img-container">
+                    <img alt={title.title} src={titlePoster} className="poster-img" />
+                </div>
+                <div className="details-container">
+                    <Modal.Header closeButton>
+                        <Modal.Title id="contained-modal-title-vcenter">
+                            <h1 className="header">{title.title} ({title.year ? title.year : 'No Release Date'})</h1>
                             {title.tmdb_type === 'tv' && <div className="meta">TV Series</div>}
                             {title.tmdb_type === 'movie' && <div className="meta">Movie</div>}
-                            <div className="description">{title.plot_overview}</div>
+                        </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div className="description">{title.plot_overview}</div>
+                        <div className="item">
+                            <div className="content">
+                                <StreamingAvailability subSources={subSources} buySources={buySources} />
+                            </div>
                         </div>
-                    </div>
-                    <div className="item">
-                        <div className="content">
-                            <StreamingAvailability sources={sources} />
-                        </div>
-                    </div>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button onClick={onHide}>Close</Button>
+                    </Modal.Footer>
                 </div>
             </div>
-        </div>
+        </Modal>
     );
 };
 
