@@ -122,6 +122,16 @@ class App extends React.Component {
                         buySources={this.state.buySources}
                     />
                 </Container>
+                <Container className="footer-container">
+                    <a className="footer-link" href="https://github.com/lieuk1/Streaming-Availability/">GitHub</a>
+                    <a className="footer-link" href="https://www.linkedin.com/in/krystelle-lieu-aa4110148/">LinkedIn</a>
+                    <p>
+                        Powered by
+                        <span> <a className="footer-link api" href="">Watchmode API</a> </span>
+                        and
+                        <span> <a className="footer-link api" href="">OMDb API</a> </span>
+                    </p>
+                </Container>
             </Container>
         );
     }
