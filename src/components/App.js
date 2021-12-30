@@ -98,7 +98,7 @@ class App extends React.Component {
     render() {
         return (
             <Container className="landing">
-                <Container className="header">
+                <Container className="landing-header">
                     <h1>Stream Mite</h1>
                     <p>A simple and free streaming availability lookup tool</p>
                 </Container>
