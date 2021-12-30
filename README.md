@@ -30,8 +30,11 @@
 <br />
 <div align="center">
   <a href="https://github.com/lieuk1/Streaming-Availability">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="public/readme-logo.png" alt="Logo" width="80" height="80">
   </a>
+  <p>
+    Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+  </p>
 
 <h3 align="center">Streaming Availability</h3>
 
