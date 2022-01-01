@@ -30,28 +30,19 @@
 <br />
 <div align="center">
   <a href="https://github.com/lieuk1/Streaming-Availability">
-    <img src="public/readme-logo.png" alt="Logo" width="80" height="80">
+    <img src="public/readme-logo.png" alt="Logo" width="64" height="64">
   </a>
+  
+  <h2 align="center"><strong>Stream Mite</strong></h2>
   <p>
-    Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-  </p>
-
-<h3 align="center">Streaming Availability</h3>
-
-  <p>
-    <p align="left">
-    Streaming Availability is an application whose purpose is to make it easier for content consumers to view the streaming availability of a TV show or movie. 
-    <br />
-    <br />
-    Sometimes the unnecessary and excess content that is shown to the user hinders their ability to view a title’s streaming availability quickly, which this application aims to solve.
-    </p>
+    <p>A simple and free streaming availability lookup tool</p>
     <a href="https://github.com/lieuk1/Streaming-Availability"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/lieuk1/Streaming-Availability">View Demo</a>
-    ·
+    <a href="#usage">View Demo</a>
+    -
     <a href="https://github.com/lieuk1/Streaming-Availability/issues">Report Bug</a>
-    ·
+    -
     <a href="https://github.com/lieuk1/Streaming-Availability/issues">Request Feature</a>
   </p>
 </div>
@@ -91,12 +82,18 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
+**Stream Mite** is an application whose purpose is to make it easier for content consumers to view the streaming availability of a TV show or movie. 
+
+Sometimes the unnecessary and excess content that is shown to the user hinders their ability to view a title’s streaming availability quickly, which this application aims to solve.
+
 
 
 ### Built With
 
 * [React.js](https://reactjs.org/)
 * [React-Bootstrap](https://react-bootstrap.github.io/)
+* [Watchmode API](https://api.watchmode.com/)
+* [OMDb API](https://www.omdbapi.com/)
 
 
 
@@ -127,7 +124,7 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    npm install
    ```
-5. Create a `.env` file in the root project directory (same    folder as `.gitignore` and `README.md`)
+5. Create a `.env` file in the root project directory (often the same folder as `.gitignore` and `README.md`)
 6. Enter your API keys in `.env`
    
    ```.env
@@ -204,8 +201,7 @@ Project Link: [https://github.com/lieuk1/Streaming-Availability](https://github.
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Watchmode API](https://api.watchmode.com/)
-* [OMDb API](https://www.omdbapi.com/)
+* [Television](https://icons8.com/icon/fbAvklUk7Ckm/television) icon by [Icons8](https://icons8.com)
 * [Semantic UI](https://semantic-ui.com/)
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
