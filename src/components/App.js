@@ -107,17 +107,18 @@ class App extends React.Component {
                 <Container className="searchbar-container">
                     <SearchBar onSubmit={this.onSearchSubmit} />
                 </Container>
-                {this.state.titles.length !== 0 && (
                 <Container className="num-results-container">
-                     <div className="num-results">{this.state.titles.length} Result(s)</div>
-                </Container>
-                )}
                 {this.state.titles.length !== 0 && (
+                     <div className="num-results">{this.state.titles.length} Result(s)</div>
+                )}
+                </Container>
                 <Container className="results-container">
+                {this.state.titles.length !== 0 && (
                     <TitleList 
                         onTitleSelect={this.onTitleSelect} 
                         titles={this.state.titles}
                         />
+                        )}
                     <TitleDetail 
                         show={this.state.modalShow}
                         onHide={() => this.setModalShow(false)}
@@ -127,7 +128,6 @@ class App extends React.Component {
                         buySources={this.state.buySources}
                         />
                 </Container>
-                )}
             </Container>
             <Container className="footer-container">
                 <p>
