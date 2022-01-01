@@ -26,6 +26,11 @@ body {
     color: #e15a46;
 }
 
+.landing-header h1 a {
+    text-decoration: none;
+    color: #e15a46;
+}
+
 .landing-header p {
     color: #444;
 }
