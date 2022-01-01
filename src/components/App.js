@@ -101,7 +101,9 @@ class App extends React.Component {
 
             <Container className="landing">
                 <Container className="landing-header">
-                    <h1>Stream Mite</h1>
+                    <h1>
+                        <a href="/">Stream Mite</a>
+                    </h1>
                     <p>A simple and free streaming availability lookup tool</p>
                 </Container>
                 <Container className="searchbar-container">
