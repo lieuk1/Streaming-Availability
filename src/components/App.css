@@ -1,3 +1,7 @@
+body {
+    background-color: #f6f5ef;
+}
+
 /* Bootstrap Fluid Containers */
 .container-fluid {
     padding: 0px;
@@ -19,30 +23,53 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     font-weight: 700;
+    color: #e15a46;
+}
+
+.landing-header p {
+    color: #444;
 }
 
 /* Container of search bar */
 .searchbar-container {
-    padding-bottom: 20px;
+    padding: 0;
+    padding-bottom: 14px;
 }
 
-.searchbar {
+.searchbar, .num-results-container {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 
+.num-results-container {
+    padding: 8px;
+    width: 30%;
+    background-color: #e15a46;
+    border-radius: 8px;
+}
+
+.ui.form input[type="text"] {
+    border: 0;
+}
+
 .results-container {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     overflow: auto;
+    padding: 0;
 }
 
 .ui.cards {
     margin: 0;
 }
 
+.ui.cards .card {
+    margin-left: 0;
+    margin-right: 10px;
+    box-shadow: none;
+}
+
 .footer-container {
     padding: 10px;
-    margin-bottom: 20px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
@@ -51,7 +78,8 @@
 .footer-link {
     text-decoration: none;
     color: lightslategrey;
-    margin-right: 8px;
+    /* margin-right: 8px; */
+    color: #e15a46;
 }
 
 .footer-link:hover {
@@ -146,9 +174,9 @@
 
 /* Number of search results */
 .num-results {
-    color: #444;
-    font-size: 16px;
+    color: #f6f5ef;
+    font-size: 14px;
+    font-weight: 600;
     text-align: center;
-    margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }

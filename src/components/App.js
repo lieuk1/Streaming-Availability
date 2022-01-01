@@ -16,8 +16,8 @@ import SearchBar from './Search/SearchBar';
 class App extends React.Component {
     state = { 
         titles: [
-            { id: 3173640, imdb_id: 'tt12940504', title: "My Name", tmdb_type: "tv", year: 2021, end_year: 0, plot_overview: "Following her father's murder, a revenge-driven woman puts her trust in a powerful crime boss — and enters the police force under his direction." },
-            { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
+            // { id: 3173640, imdb_id: 'tt12940504', title: "My Name", tmdb_type: "tv", year: 2021, end_year: 0, plot_overview: "Following her father's murder, a revenge-driven woman puts her trust in a powerful crime boss — and enters the police force under his direction." },
+            // { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
             // { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
             // { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
             // { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
@@ -97,6 +97,8 @@ class App extends React.Component {
     
     render() {
         return (
+            <React.Fragment>
+
             <Container className="landing">
                 <Container className="landing-header">
                     <h1>Stream Mite</h1>
@@ -105,14 +107,17 @@ class App extends React.Component {
                 <Container className="searchbar-container">
                     <SearchBar onSubmit={this.onSearchSubmit} />
                 </Container>
+                {this.state.titles.length !== 0 && (
                 <Container className="num-results-container">
-                    <div className="num-results">{this.state.titles.length} Result(s)</div>
+                     <div className="num-results">{this.state.titles.length} Result(s)</div>
                 </Container>
+                )}
+                {this.state.titles.length !== 0 && (
                 <Container className="results-container">
                     <TitleList 
                         onTitleSelect={this.onTitleSelect} 
                         titles={this.state.titles}
-                    />
+                        />
                     <TitleDetail 
                         show={this.state.modalShow}
                         onHide={() => this.setModalShow(false)}
@@ -120,19 +125,24 @@ class App extends React.Component {
                         titlePoster={this.state.selectedTitlePosterUrl}
                         subSources={this.state.subSources} 
                         buySources={this.state.buySources}
-                    />
+                        />
                 </Container>
-                <Container className="footer-container">
-                    <a className="footer-link" href="https://github.com/lieuk1/Streaming-Availability/">GitHub</a>
-                    <a className="footer-link" href="https://www.linkedin.com/in/krystelle-lieu-aa4110148/">LinkedIn</a>
-                    <p>
-                        Powered by
-                        <span> <a className="footer-link api" href="">Watchmode API</a> </span>
-                        and
-                        <span> <a className="footer-link api" href="">OMDb API</a> </span>
-                    </p>
-                </Container>
+                )}
             </Container>
+            <Container className="footer-container">
+                <p>
+                <a className="footer-link" href="https://github.com/lieuk1/Streaming-Availability/">GitHub</a>
+                <span> - </span>
+                <a className="footer-link" href="https://www.linkedin.com/in/krystelle-lieu-aa4110148/">LinkedIn</a>
+                <span> - </span>
+                    Created with
+                    <span> <a className="footer-link api" href="">Watchmode</a> </span>
+                    and
+                    <span> <a className="footer-link api" href="">OMDb</a> </span>
+                </p>
+            </Container>
+            
+            </React.Fragment>
         );
     }
 }
