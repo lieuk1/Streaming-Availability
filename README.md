@@ -33,7 +33,7 @@
     <img src="public/readme-logo.png" alt="Logo" width="64" height="64">
   </a>
   
-  <h2 align="center"><strong>Stream Mite</strong></h2>
+  <h3 align="center"><strong>Stream Mite</strong></h3>
   <p>
     <p>A simple and free streaming availability lookup tool</p>
     <a href="https://github.com/lieuk1/Streaming-Availability"><strong>Explore the docs »</strong></a>
