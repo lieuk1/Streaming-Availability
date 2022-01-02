@@ -10,6 +10,11 @@ body {
     max-width: 60%; /* Width of content */
 }
 
+
+/* ------ */
+/* HEADER */
+/* ------ */
+
 /* Container of title and description */
 .header-container {
     text-align: center;
@@ -43,6 +48,11 @@ body {
     color: #73C2BE;
 }
 
+
+/* ---------- */
+/* SEARCH BAR */
+/* ---------- */
+
 /* Container of search bar */
 .searchbar-container {
     padding: 0;
@@ -59,6 +69,11 @@ body {
 .ui.form input[type="text"] {
     border: 0;
 }
+
+
+/* ----------------- */
+/* NUMBER OF RESULTS */
+/* ----------------- */
 
 /* Container of number of results */
 .num-results-container {
@@ -101,6 +116,11 @@ body {
     box-shadow: none;
 }
 
+
+/* ------ */
+/* FOOTER */
+/* ------ */
+
 /* Container of footer */
 .footer-container {
     padding: 10px;
@@ -118,6 +138,11 @@ body {
     color: #3E8E8A;
     text-decoration: underline;
 }
+
+
+/* ----- */
+/* MODAL */
+/* ----- */
 
 /* Modal title and release year */
 .header {
