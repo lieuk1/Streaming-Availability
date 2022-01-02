@@ -107,9 +107,7 @@ class App extends React.Component {
                 </Container>
                 <Container className="num-results-container">
                     <div className="num-results">
-                    {this.state.titles.length !== 0 && (
                         <p>{this.state.titles.length} Result(s)</p>
-                    )}
                     </div>
                 </Container>
                 <Container className="results-container">
