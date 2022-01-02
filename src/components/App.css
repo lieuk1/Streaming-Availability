@@ -48,7 +48,7 @@ body {
 .num-results-container {
     display: flex;
     justify-content: center;
-    height: 5vh;
+    height: 36px;
 }
 
 .num-results {
@@ -105,8 +105,27 @@ body {
     color: #e15a46;
 }
 
+.landing-header h1 a,
+.footer-link {
+    color: #73C2BE;
+}
+
+.landing-header h1 a {
+    transition: all 0.3s ease 0s;
+}
+
+.landing-header h1 a:hover {
+    color: #3E8E8A;
+
+}
+
+.num-results {
+    background-color: #73C2BE;
+}
+
+
 .footer-link:hover {
-    color: black;
+    color: #3E8E8A;
     text-decoration: underline;
 }
 
