@@ -99,28 +99,28 @@ class App extends React.Component {
         return (
             <React.Fragment>
 
-            <Container className="landing">
-                <Container className="landing-header">
-                    <h1>
-                        <a href="/">Stream Mite</a>
-                    </h1>
+            <Container className="content-container">
+                <Container className="header-container">
+                    <h1><a href="/">Stream Mite</a></h1>
                     <p>A simple and free streaming availability lookup tool</p>
                 </Container>
                 <Container className="searchbar-container">
                     <SearchBar onSubmit={this.onSearchSubmit} />
                 </Container>
                 <Container className="num-results-container">
-                {this.state.titles.length !== 0 && (
-                     <div className="num-results">{this.state.titles.length} Result(s)</div>
-                )}
+                    <div className="num-results">
+                    {this.state.titles.length !== 0 && (
+                        <p>{this.state.titles.length} Result(s)</p>
+                    )}
+                    </div>
                 </Container>
                 <Container className="results-container">
-                {this.state.titles.length !== 0 && (
+                    {this.state.titles.length !== 0 && (
                     <TitleList 
                         onTitleSelect={this.onTitleSelect} 
                         titles={this.state.titles}
                         />
-                        )}
+                    )}
                     <TitleDetail 
                         show={this.state.modalShow}
                         onHide={() => this.setModalShow(false)}
