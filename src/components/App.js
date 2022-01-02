@@ -136,9 +136,9 @@ class App extends React.Component {
                 <a className="footer-link" href="https://www.linkedin.com/in/krystelle-lieu-aa4110148/">LinkedIn</a>
                 <span> - </span>
                     Created with
-                    <span> <a className="footer-link api" href="">Watchmode</a> </span>
+                    <span> <a className="footer-link" href="https://api.watchmode.com/">Watchmode</a> </span>
                     and
-                    <span> <a className="footer-link api" href="">OMDb</a> </span>
+                    <span> <a className="footer-link" href="https://www.omdbapi.com/">OMDb</a> </span>
                 </p>
             </Container>
             
