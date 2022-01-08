@@ -162,7 +162,7 @@ You will also see any lint errors in the console.
 
 ### Current Design
 
-![UI Picture](https://github.com/lieuk1/Streaming-Availability/tree/wip-redesign/public/readme-ui-pic.PNG)
+![UI Picture](public/readme-ui-pic.PNG)
 
 
 <!-- ROADMAP -->
