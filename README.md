@@ -145,11 +145,20 @@ To get a local copy up and running follow these simple example steps.
 ## Usage
 
 <!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+-->
+_For a complete overview of usage examples, please refer to the [Create React App Documentation](https://example.com)_
 
-_For more examples, please refer to the [Documentation](https://example.com)_ -->
+### Available Scripts
 
-<!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
+In the project directory, you can run:
 
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
 
 <!-- ROADMAP -->
