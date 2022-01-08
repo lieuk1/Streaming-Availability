@@ -146,7 +146,7 @@ To get a local copy up and running follow these simple example steps.
 
 <!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 -->
-_For a complete overview of usage examples, please refer to the [Create React App Documentation](https://example.com)_
+_For a complete overview of usage examples, please refer to the [Create React App Documentation](https://github.com/lieuk1/Streaming-Availability/blob/wip-redesign/CREATE-REACT-APP.md)_
 
 ### Available Scripts
 
@@ -160,9 +160,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### Demo
+### Current Design
 
-![Demo]()
+![UI Picture](https://github.com/lieuk1/Streaming-Availability/tree/wip-redesign/public/readme-ui-pic.PNG)
 
 
 <!-- ROADMAP -->
