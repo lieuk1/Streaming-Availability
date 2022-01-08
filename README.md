@@ -162,7 +162,7 @@ You will also see any lint errors in the console.
 
 ### Demo
 
-![Demo](https://gifs.com/gif/NOX9Vm)
+![Demo](https://github.com/lieuk1/Streaming-Availability/blob/wip-redesign/public/Demo_1_7_2022.gif)
 
 
 <!-- ROADMAP -->
