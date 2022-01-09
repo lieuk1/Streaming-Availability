@@ -1,6 +1,6 @@
 import React from 'react';
 import watchmode from '../api/watchmode';
-import NavigationBar from './Navigation/NavigationBar';
+import SearchBar from './Search/SearchBar';
 import TitleList from './Title/TitleList';
 import TitleDetail from './Title/TitleDetail';
 
@@ -14,8 +14,8 @@ import Container from 'react-bootstrap/Container';
 class App extends React.Component {
     state = { 
         titles: [
-            { id: 3173640, imdb_id: 'tt12940504', title: "My Name", tmdb_type: "tv", year: 2021, end_year: 0, plot_overview: "Following her father's murder, a revenge-driven woman puts her trust in a powerful crime boss — and enters the police force under his direction." },
-            { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
+            // { id: 3173640, imdb_id: 'tt12940504', title: "My Name", tmdb_type: "tv", year: 2021, end_year: 0, plot_overview: "Following her father's murder, a revenge-driven woman puts her trust in a powerful crime boss — and enters the police force under his direction." },
+            // { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
             // { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
             // { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
             // { id: 1591456, imdb_id: 'tt11107074', title: "My Hero Academia: Heroes Rising", tmdb_type: "movie", year: 2019, end_year: 0, plot_overview: "Plot overview" },
@@ -95,18 +95,28 @@ class App extends React.Component {
     
     render() {
         return (
-            <Container fluid>
-                <Container className="navbar-container" fluid>
-                    <NavigationBar onSubmit={this.onSearchSubmit} />
+            <React.Fragment>
+
+            <Container className="content-container">
+                <Container className="header-container">
+                    <h1><a href="/">Stream Mite</a></h1>
+                    <p>A simple and free streaming availability lookup tool</p>
+                </Container>
+                <Container className="searchbar-container">
+                    <SearchBar onSubmit={this.onSearchSubmit} />
                 </Container>
                 <Container className="num-results-container">
-                    <div className="num-results">{this.state.titles.length} Result(s)</div>
+                    <div className="num-results">
+                        <p>{this.state.titles.length} Result(s)</p>
+                    </div>
                 </Container>
                 <Container className="results-container">
+                    {this.state.titles.length !== 0 && (
                     <TitleList 
                         onTitleSelect={this.onTitleSelect} 
                         titles={this.state.titles}
-                    />
+                        />
+                    )}
                     <TitleDetail 
                         show={this.state.modalShow}
                         onHide={() => this.setModalShow(false)}
@@ -114,9 +124,23 @@ class App extends React.Component {
                         titlePoster={this.state.selectedTitlePosterUrl}
                         subSources={this.state.subSources} 
                         buySources={this.state.buySources}
-                    />
+                        />
                 </Container>
             </Container>
+            <Container className="footer-container">
+                <p>
+                <a className="footer-link" href="https://github.com/lieuk1/Streaming-Availability/">GitHub</a>
+                <span> - </span>
+                <a className="footer-link" href="https://www.linkedin.com/in/krystelle-lieu-aa4110148/">LinkedIn</a>
+                <span> - </span>
+                    Created with
+                    <span> <a className="footer-link" href="https://api.watchmode.com/">Watchmode</a> </span>
+                    and
+                    <span> <a className="footer-link" href="https://www.omdbapi.com/">OMDb</a> </span>
+                </p>
+            </Container>
+            
+            </React.Fragment>
         );
     }
 }

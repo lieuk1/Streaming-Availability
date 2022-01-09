@@ -30,25 +30,19 @@
 <br />
 <div align="center">
   <a href="https://github.com/lieuk1/Streaming-Availability">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="public/readme-logo.png" alt="Logo" width="64" height="64">
   </a>
-
-<h3 align="center">Streaming Availability</h3>
-
+  
+  <h3 align="center"><strong>Stream Mite</strong></h3>
   <p>
-    <p align="left">
-    Streaming Availability is an application whose purpose is to make it easier for content consumers to view the streaming availability of a TV show or movie. 
-    <br />
-    <br />
-    Sometimes the unnecessary and excess content that is shown to the user hinders their ability to view a title’s streaming availability quickly, which this application aims to solve.
-    </p>
+    <p>A simple and free streaming availability lookup tool</p>
     <a href="https://github.com/lieuk1/Streaming-Availability"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/lieuk1/Streaming-Availability">View Demo</a>
-    ·
+    <a href="#usage">View Demo</a>
+    -
     <a href="https://github.com/lieuk1/Streaming-Availability/issues">Report Bug</a>
-    ·
+    -
     <a href="https://github.com/lieuk1/Streaming-Availability/issues">Request Feature</a>
   </p>
 </div>
@@ -88,12 +82,18 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
+**Stream Mite** is an application whose purpose is to make it easier for content consumers to view the streaming availability of a TV show or movie. 
+
+Sometimes the unnecessary and excess content that is shown to the user hinders their ability to view a title’s streaming availability quickly, which this application aims to solve.
+
 
 
 ### Built With
 
 * [React.js](https://reactjs.org/)
 * [React-Bootstrap](https://react-bootstrap.github.io/)
+* [Watchmode API](https://api.watchmode.com/)
+* [OMDb API](https://www.omdbapi.com/)
 
 
 
@@ -104,7 +104,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-* npm
+- npm
+  
   ```sh
   npm install npm@latest -g
   ```
@@ -114,22 +115,25 @@ To get a local copy up and running follow these simple example steps.
 1. Get a free [Watchmode API key](https://api.watchmode.com/) 
 2. Get a free [OMDb API key](https://www.omdbapi.com/)
 3. Clone the repo
+   
    ```sh
    git clone https://github.com/lieuk1/Streaming-Availability.git
    ```
 4. Install NPM packages
+   
    ```sh
    npm install
    ```
-5. Create a `.env` file in the root project directory (same    folder as `.gitignore` and `README.md`)
+5. Create a `.env` file in the root project directory (often the same folder as `.gitignore` and `README.md`)
 6. Enter your API keys in `.env`
+   
    ```.env
    REACT_APP_WATCHMODE_API_KEY=YOUR_KEY
    REACT_APP_OMDB_API_KEY=YOUR_KEY
    ```
 7. Add `.env` to the end of the `.gitignore` file
+   
    ```.gitignore
-   ...
    # api keys
    .env
    ```
@@ -141,22 +145,35 @@ To get a local copy up and running follow these simple example steps.
 ## Usage
 
 <!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+-->
+_For a complete overview of usage examples, please refer to the [Create React App Documentation](https://github.com/lieuk1/Streaming-Availability/blob/wip-redesign/CREATE-REACT-APP.md)_
 
-_For more examples, please refer to the [Documentation](https://example.com)_ -->
+### Available Scripts
 
-<!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
+In the project directory, you can run:
 
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### Current Design
+
+![UI Picture](public/readme-ui-pic.PNG)
 
 
 <!-- ROADMAP -->
-## Roadmap
+<!-- ## Roadmap -->
 
 <!-- - [] Feature 1
 - [] Feature 2
 - [] Feature 3
     - [] Nested Feature -->
 
-See the [open issues](https://github.com/lieuk1/Streaming-Availability/issues) for a full list of proposed features (and known issues).
+<!-- See the [open issues](https://github.com/lieuk1/Streaming-Availability/issues) for a full list of proposed features (and known issues). -->
 
 <!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
 
@@ -167,7 +184,7 @@ See the [open issues](https://github.com/lieuk1/Streaming-Availability/issues) f
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "major enhancement" or "minor enhancement".
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
@@ -175,8 +192,6 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -199,8 +214,9 @@ Project Link: [https://github.com/lieuk1/Streaming-Availability](https://github.
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Watchmode API](https://api.watchmode.com/)
-* [OMDb API](https://www.omdbapi.com/)
+* [Television](https://icons8.com/icon/fbAvklUk7Ckm/television) icon by [Icons8](https://icons8.com)
+* [Semantic UI](https://semantic-ui.com/)
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

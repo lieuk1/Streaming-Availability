@@ -12,8 +12,8 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.onFormSubmit} className="ui form" style={{ border: '0px solid red' }}>
-                <div className="field" style={{ border: '0px solid red' }}>
+            <form onSubmit={this.onFormSubmit} className="ui huge form searchbar">
+                <div className="field">
                     <div className="ui icon input">
                         <input type="text" placeholder="Search for movies and tv series"
                             value={this.state.term} onChange={(e) => this.setState({ term: e.target.value })}
